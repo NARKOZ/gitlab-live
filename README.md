@@ -1,4 +1,4 @@
-# GitLab Live
+# GitLab Live [![Build Status](https://travis-ci.org/NARKOZ/gitlab-live.svg)](https://travis-ci.org/NARKOZ/gitlab-live)
 
 Interactive online shell for GitLab REST API, based on [gitlab client CLI](https://github.com/NARKOZ/gitlab).  
 Can be used for administration tasks, as an interactive way to try out
