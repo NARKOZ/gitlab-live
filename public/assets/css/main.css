@@ -1,0 +1,23 @@
+body {
+  padding-top: 10px;
+}
+
+.point {
+  font-weight: bold;
+  color: #95a5a6;
+}
+
+kbd {
+  cursor: pointer;
+}
+
+pre {
+  overflow: auto;
+  color: #fff;
+  background-color: #2c3e50;
+  border: none;
+  border-radius: 3px;
+  height: 400px;
+  padding: 19px;
+  margin-bottom: 20px;
+}

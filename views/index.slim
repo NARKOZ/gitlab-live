@@ -1,0 +1,85 @@
+.container-fluid
+  pre#js-query-output
+    div
+      span.point gitlab&gt;
+      '
+      = @message
+
+  form#js-query-form
+    .row
+      .col-md-10
+        input#js-query-field.form-control type="text" name="query" autocomplete="off"
+      .col-md-2
+        button.btn.btn-primary type="submit" title="Execute command (Enter)"
+          span.fa.fa-lg.fa-caret-right
+          '
+          | Run
+        '
+        a#js-clear-btn.btn.btn-primary title="Clear output (Ctrl+K)" Clear
+
+    br
+    .row#js-api-settings
+      .col-md-12
+        a.btn.btn-primary
+          span.fa.fa-lg.fa-cogs
+          '
+          | settings
+
+      .col-md-2
+        label for="host" API endpoint
+        input#host.form-control type="text" name="host" value="https://gitlab.com/api/v3"
+      .col-md-2
+        label for="token" Private token
+        input#token.form-control type="text" name="token"
+      .col-md-2
+        label for="sudo" Sudo
+        input#sudo.form-control type="text" name="sudo"
+
+  .row
+    .col-md-6
+      hr
+      h1 Help
+      p.lead
+        ' Send
+        a href="https://github.com/NARKOZ/gitlab" gitlab client
+        '
+        | methods as commands, and parameters as arguments:
+        br
+        kbd users
+        br
+        kbd user
+        br
+        kbd user 2
+      p.lead
+        ' Filter output by supplying
+        code --only
+        '
+        ' or
+        code --except
+        '
+        | flags:
+        br
+        kbd user --only=id,email,name
+        br
+        kbd users --except=id,email,name
+      p.text-muted
+        ' More info can be found at
+        a href="http://narkoz.github.io/gitlab/cli" target="_blank" http://narkoz.github.io/gitlab/cli
+    .col-md-6
+      hr
+      h1 Notes
+      ol
+        li User agent is set to 'Gitlab-Live'
+        li Heroku has a timeout of 55 seconds for commands
+
+      ul.nav.nav-pills
+        li
+          a href="https://github.com/NARKOZ/gitlab-live"
+            span.fa.fa-lg.fa-github
+            '
+            | Source code
+        li
+          a href="https://github.com/NARKOZ/gitlab-live/issues"
+            span.fa.fa-lg.fa-bug
+            '
+            | Report issues
