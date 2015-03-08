@@ -1,10 +1,10 @@
 # GitLab Live
 
-Interactive online shell for GitLab REST API, based on [gitlab client CLI](https://github.com/NARKOZ/gitlab).
+Interactive online shell for GitLab REST API, based on [gitlab client CLI](https://github.com/NARKOZ/gitlab).  
 Can be used for administration tasks, as an interactive way to try out
 GitLab API, or as a debugging aid during development.
 
-Try it: http://gitlab-live.herokuapp.com
+Try it: https://gitlab-live.herokuapp.com
 
 ## Usage
 
