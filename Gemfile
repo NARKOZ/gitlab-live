@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+if ENV['HEROKU_RUBY_VERSION']
+  ruby ENV['HEROKU_RUBY_VERSION']
+end
+
 gem 'sinatra'
 
 gem 'slim'
