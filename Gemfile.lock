@@ -27,7 +27,6 @@ GEM
     eventmachine (1.0.7)
     ffi (1.9.6)
     formatador (0.2.5)
-    git-revision (0.0.1)
     guard (2.12.4)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -104,7 +103,6 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  git-revision
   gitlab!
   guard-livereload (~> 2.4)
   minitest
