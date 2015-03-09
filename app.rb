@@ -17,7 +17,7 @@ class GitlabLive < Sinatra::Base
   end
 
   not_found do
-    'Not found'
+    slim :'404'
   end
 
   get '/' do
