@@ -28,6 +28,7 @@ $(function() {
 
   $queryForm.submit(function(e) {
     e.preventDefault();
+    NProgress.start();
 
     if ($input.val().trim() === "") {
       $input.val('');
@@ -35,12 +36,14 @@ $(function() {
     }
 
     $.post('/query', $(this).serialize(), function(data) {
+      NProgress.done();
       $('.text-danger').remove();
       var htmlOutput = '<div><span class="point">gitlab&gt;</span> ' + data.query + '</div><div>' + data.output + '</div>';
       $output.append(htmlOutput);
       $output.stop().animate({ scrollTop: $output[0].scrollHeight }, 700);
       $input.val('');
     }).fail(function() {
+      NProgress.done();
       $('#js-query-form .col-md-10').append('<p class="text-danger">Query execution failed</p>');
     });
   });
