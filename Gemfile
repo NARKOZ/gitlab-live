@@ -12,6 +12,7 @@ gem 'gitlab', github: 'NARKOZ/gitlab'
 gem 'puma', group: :production
 
 group :development do
+  gem 'rake'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'sinatra-contrib', require: false
