@@ -21,3 +21,13 @@ pre {
   padding: 19px;
   margin-bottom: 20px;
 }
+
+pre a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+pre a:hover {
+  color: #337ab7;
+  text-decoration: none;
+}

@@ -59,7 +59,14 @@ class GitlabLive < Sinatra::Base
     yield
     $stdout = STDOUT
     $stderr = STDERR
-    out.string
+
+    if out.string =~ /Ri docs not found/
+      'Documentation can be found at ' \
+      '<a href="http://www.rubydoc.info/gems/gitlab/Gitlab/Client" target="_blank">' \
+      'http://www.rubydoc.info/gems/gitlab/Gitlab/Client</a>'
+    else
+      out.string
+    end
   rescue SystemExit
     if out.string =~ /Unknown command/
       "Unknown command. #{help_output}"
