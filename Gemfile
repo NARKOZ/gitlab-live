@@ -9,6 +9,8 @@ gem 'sinatra'
 gem 'slim'
 gem 'gitlab', github: 'NARKOZ/gitlab'
 
+gem 'puma', group: :production
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
