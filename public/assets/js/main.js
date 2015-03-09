@@ -9,6 +9,16 @@ $(function() {
     $settings.hide();
   }
 
+  function toggleSubmit() {
+    var $submitBtn = $('#js-run-btn');
+
+    if ($submitBtn.attr('disabled') === 'disabled') {
+      $submitBtn.removeAttr('disabled');
+    } else {
+      $submitBtn.attr('disabled', 'disabled');
+    }
+  }
+
   $('kbd').attr('title', 'Click to execute this query');
 
   $('kbd').click(function() {
@@ -29,6 +39,7 @@ $(function() {
   $queryForm.submit(function(e) {
     e.preventDefault();
     NProgress.start();
+    toggleSubmit();
 
     if ($input.val().trim() === "") {
       $input.val('');
@@ -38,13 +49,15 @@ $(function() {
     $.post('/query', $(this).serialize(), function(data) {
       NProgress.done();
       $('.text-danger').remove();
+      toggleSubmit();
       var htmlOutput = '<div><span class="point">gitlab&gt;</span> ' + data.query + '</div><div>' + data.output + '</div>';
       $output.append(htmlOutput);
       $output.stop().animate({ scrollTop: $output[0].scrollHeight }, 700);
       $input.val('');
     }).fail(function() {
       NProgress.done();
-      $('#js-query-form .col-md-10').append('<p class="text-danger">Query execution failed</p>');
+      toggleSubmit();
+      $queryForm.find('.col-md-10').append('<p class="text-danger">Query execution failed</p>');
     });
   });
 });
