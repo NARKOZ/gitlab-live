@@ -7,6 +7,7 @@ end
 gem 'sinatra'
 
 gem 'slim'
+gem 'git-revision'
 gem 'gitlab', github: 'NARKOZ/gitlab'
 
 gem 'puma', group: :production

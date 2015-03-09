@@ -83,3 +83,7 @@
             span.fa.fa-lg.fa-bug
             '
             | Report issues
+
+      small
+        ' rev:
+        = Git::Revision.commit_short

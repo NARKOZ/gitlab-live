@@ -1,5 +1,6 @@
 require 'slim'
 require 'gitlab/cli'
+require 'git-revision'
 require 'sinatra/base'
 
 class GitlabLive < Sinatra::Base
