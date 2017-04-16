@@ -1,5 +1,7 @@
 # GitLab Live [![Build Status](https://travis-ci.org/NARKOZ/gitlab-live.svg)](https://travis-ci.org/NARKOZ/gitlab-live)
 
+[![Join the chat at https://gitter.im/NARKOZ/gitlab-live](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/NARKOZ/gitlab-live?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Interactive online shell for GitLab REST API, based on [gitlab client CLI](https://github.com/NARKOZ/gitlab).  
 Can be used for administration tasks, as an interactive way to try out
 GitLab API, or as a debugging aid during development.
