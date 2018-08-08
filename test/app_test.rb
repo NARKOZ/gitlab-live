@@ -32,7 +32,7 @@ class GitlabLiveTest < MiniTest::Test
   end
 
   def test_query
-    post '/query', { host: 'https://example.com/api/v3', token: '1234', sudo: '', query: 'help' }
+    post '/query', { host: 'https://example.com/api/v4', token: '1234', sudo: '', query: 'help' }
     assert last_response.ok?
     assert last_response.content_type.include?('application/json')
 

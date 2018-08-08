@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/NARKOZ/gitlab.git
-  revision: 99eb917096e8996db29dd76a7744335d3bf65d89
+  revision: 16da584c516111e696bbbd4a94f92b244bcda917
   specs:
     gitlab (4.5.0)
       httparty (>= 0.14.0)
@@ -72,6 +72,8 @@ GEM
     rack (2.0.5)
     rack-protection (2.0.3)
       rack
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     rake (12.3.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
@@ -114,6 +116,7 @@ DEPENDENCIES
   guard-livereload (~> 2.4)
   minitest
   puma
+  rack-test
   rake
   sinatra
   sinatra-contrib
