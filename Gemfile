@@ -1,8 +1,9 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-if ENV['HEROKU_RUBY_VERSION']
-  ruby ENV['HEROKU_RUBY_VERSION']
-end
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby ENV['HEROKU_RUBY_VERSION'] if ENV['HEROKU_RUBY_VERSION']
 
 gem 'sinatra'
 
