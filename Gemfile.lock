@@ -10,7 +10,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.15.0)
-    better_errors (2.5.1)
+    better_errors (2.6.0)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
@@ -21,7 +21,7 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    erubi (1.8.0)
+    erubi (1.9.0)
     eventmachine (1.2.7)
     ffi (1.9.25)
     formatador (0.2.5)
@@ -64,7 +64,7 @@ GEM
       method_source (~> 0.9.0)
     puma (4.3.1)
       nio4r (~> 2.0)
-    rack (2.1.1)
+    rack (2.2.2)
     rack-protection (2.0.8.1)
       rack
     rack-test (1.1.0)
